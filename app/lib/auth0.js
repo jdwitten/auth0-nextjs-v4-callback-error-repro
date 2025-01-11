@@ -12,7 +12,7 @@ export const auth0 = new Auth0Client({
   },
   authorizationParameters: {
     scope: 'openid profile email offline_access',
-    audience: 'https://test-api.com',
+    audience: process.env.AUTH0_AUDIENCE,
     returnTo: 'http://localhost:3000',
   },
 });
